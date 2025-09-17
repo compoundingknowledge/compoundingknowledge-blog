@@ -1,0 +1,16 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'PaperMod'
+
+[[menu.main]] # This adds a new item to the main menu
+  identifier = "wikifolio" # A unique ID for the menu item
+  name = "Wikifolio"      # The text that appears in the menu
+  url = "/wikifolio/"     # The URL it links to. Must match your folder name!
+  weight = 20             # Determines order. Lower numbers appear first.
+
+[[menu.main]] # This is the default blog link. It might already exist.
+  identifier = "posts"
+  name = "Blog"
+  url = "/posts/"
+  weight = 10
