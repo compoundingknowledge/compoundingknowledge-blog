@@ -1,6 +1,6 @@
 baseURL = 'https://compoundingknowledge.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Compounding Knowledge'
 theme = 'PaperMod'
 
 [[menu.main]] # This adds a new item to the main menu
