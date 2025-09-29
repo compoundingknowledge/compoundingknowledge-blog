@@ -170,6 +170,7 @@
   },
   "active": "23c99d469183b6c8",
   "lastOpenFiles": [
+    "themes/PaperMod/theme.toml",
     "netlify.toml",
     "hugo - Copy.toml",
     "content/wikifolio/_index.md.md",
@@ -182,7 +183,6 @@
     "public/wikifolio/index.html",
     "public/wikifolio/untitled/index.html",
     "public/wikifolio/untitled",
-    "public/wikifolio",
     "content/posts/my-first-post.md.md",
     "content/Untitled.md",
     "public/posts/my-first-post.md",
