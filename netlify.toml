@@ -1,0 +1,9 @@
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.128.0" # Use the latest version number from https://github.com/gohugoio/hugo/releases
+
+[context.production.environment]
+  HUGO_ENV = "production"

@@ -168,8 +168,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "295295a55799b7d0",
+  "active": "23c99d469183b6c8",
   "lastOpenFiles": [
+    "netlify.toml",
+    "hugo - Copy.toml",
     "content/wikifolio/_index.md.md",
     "public/wikifolio/_index.md/index.html",
     "public/wikifolio/_index.md",
@@ -182,7 +184,6 @@
     "public/wikifolio/untitled",
     "public/wikifolio",
     "content/posts/my-first-post.md.md",
-    "content/wikifolio",
     "content/Untitled.md",
     "public/posts/my-first-post.md",
     "content/posts/Untitled.md",
