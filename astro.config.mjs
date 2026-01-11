@@ -1,18 +1,22 @@
 import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 import keystatic from '@keystatic/astro';
-import vercel from '@astrojs/vercel';
+import vercel from '@astrojs/vercel/serverless';
 
-// https://astro.build/config
 export default defineConfig({
-  output: 'server', // Use server mode for better Keystatic dashboard handling in Astro 5
-  adapter: vercel(),
+  // 'server' mode ensures SSR works for the CMS
+  output: 'server',
+
+  // We use the specific serverless import to ensure Vercel knows it's a function, not a Node server
+  adapter: vercel({
+    webAnalytics: { enabled: true }
+  }),
+
   integrations: [
+    // Use the official integration, not the Vite plugin
+    tailwind(),
     react(),
     keystatic()
   ],
-  vite: {
-    plugins: [tailwindcss()]
-  }
 });
