@@ -1,10 +1,8 @@
 import { config, fields, collection } from '@keystatic/core';
 
-// Check for production using multiple common environment markers
-const isProd = process.env.NODE_ENV === 'production' || import.meta.env.PROD || process.env.VERCEL === '1';
-
 export default config({
-    storage: isProd
+    // In Astro ist import.meta.env.PROD der sicherste Weg
+    storage: import.meta.env.PROD
         ? {
             kind: 'github',
             repo: 'compoundingknowledge/compoundingknowledge-blog',
