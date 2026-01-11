@@ -78,6 +78,13 @@ Deploy a "Hello World" blog using Astro, Tailwind CSS, and Keystatic CMS with lo
     - Added `.vercel/` to `.gitignore`.
     - Pushed a clean build to GitHub.
 
+### Issue 8: GitHub OAuth `redirect_uri` Mismatch
+- **Problem:** Clicking "Login" on the Keystatic admin page results in a GitHub error: "The `redirect_uri` is not associated with this application."
+- **Cause:** The "Callback URL" in the GitHub App settings does not match the actual domain where the Keystatic admin is running.
+- **Fix:** Update the GitHub App settings:
+    - **Homepage URL**: `https://your-vercel-domain.vercel.app`
+    - **Callback URL**: `https://your-vercel-domain.vercel.app/api/keystatic/callback`
+
 ---
 
 
