@@ -6,7 +6,7 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  // output: 'static' is default in Astro 5 and behaves like hybrid did in 4
+  output: 'server', // Use server mode for better Keystatic dashboard handling in Astro 5
   adapter: vercel(),
   integrations: [
     react(),
