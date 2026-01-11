@@ -62,6 +62,13 @@ Deploy a "Hello World" blog using Astro, Tailwind CSS, and Keystatic CMS with lo
     - Updated `astro.config.mjs` to use `adapter: vercel()`.
     - Updated Vercel adapter import to the modern `@astrojs/vercel` entry point.
 
+### Setup: Keystatic GitHub Mode for Production
+- **Goal:** Enable the CMS to write directly to GitHub when deployed to Vercel, while keeping local storage for development.
+- **Fix:** 
+    - Updated `keystatic.config.ts` to use conditional storage logic based on `import.meta.env.PROD`.
+    - Configured the `repo` field to `compoundingknowledge/compoundingknowledge-blog`.
+    - Optimized the schema: Switched to `fields.slug` for titles and `fields.document` for rich-text content.
+
 
 ---
 

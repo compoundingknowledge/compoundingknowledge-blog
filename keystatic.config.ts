@@ -1,9 +1,14 @@
 import { config, fields, collection } from '@keystatic/core';
 
 export default config({
-    storage: {
-        kind: 'local',
-    },
+    storage: import.meta.env.PROD
+        ? {
+            kind: 'github',
+            repo: 'compoundingknowledge/compoundingknowledge-blog',
+        }
+        : {
+            kind: 'local',
+        },
     collections: {
         posts: collection({
             label: 'Posts',
@@ -11,8 +16,14 @@ export default config({
             path: 'src/content/posts/*',
             format: { contentField: 'content' },
             schema: {
-                title: fields.text({ label: 'Title' }),
-                content: fields.markdoc({ label: 'Content' }),
+                title: fields.slug({ name: { label: 'Title' } }),
+                content: fields.document({
+                    label: 'Content',
+                    formatting: true,
+                    dividers: true,
+                    links: true,
+                    images: true,
+                }),
             },
         }),
     },
