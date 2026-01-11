@@ -1,8 +1,10 @@
 import { config, fields, collection } from '@keystatic/core';
 
+// Safe check for production environment
+const isProd = import.meta.env?.PROD || process.env.NODE_ENV === 'production';
+
 export default config({
-    // In Astro ist import.meta.env.PROD der sicherste Weg
-    storage: import.meta.env.PROD
+    storage: isProd
         ? {
             kind: 'github',
             repo: 'compoundingknowledge/compoundingknowledge-blog',
