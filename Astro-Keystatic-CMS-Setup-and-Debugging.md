@@ -70,7 +70,16 @@ Deploy a "Hello World" blog using Astro, Tailwind CSS, and Keystatic CMS with lo
     - Optimized the schema: Switched to `fields.slug` for titles and `fields.document` for rich-text content.
 
 
+### Issue 7: Vercel "entry.mjs not found" (500 Error)
+- **Problem:** The serverless function crashed with `ERR_MODULE_NOT_FOUND`.
+- **Cause:** The `.vercel` directory was accidentally committed to Git. This folder contains local build paths that conflict with the Vercel cloud runtime.
+- **Fix:** 
+    - Removed `.vercel/` from Git tracking (`git rm -r --cached .vercel`).
+    - Added `.vercel/` to `.gitignore`.
+    - Pushed a clean build to GitHub.
+
 ---
+
 
 ## 📂 File Structure Preview
 ```text
