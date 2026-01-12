@@ -1,0 +1,42 @@
+---
+// Force server-side rendering for this page to read server env vars
+export const prerender = false;
+
+// Access variables safely
+const clientId = import.meta.env.KEYSTATIC_GITHUB_CLIENT_ID || process.env.KEYSTATIC_GITHUB_CLIENT_ID;
+const secret = import.meta.env.KEYSTATIC_GITHUB_CLIENT_SECRET || process.env.KEYSTATIC_GITHUB_CLIENT_SECRET;
+const baseUrl = import.meta.env.KEYSTATIC_URL || process.env.KEYSTATIC_URL;
+
+// Construct a status object
+const debugInfo = {
+  timestamp: new Date().toISOString(),
+  environment: import.meta.env.MODE,
+  variables: {
+    KEYSTATIC_GITHUB_CLIENT_ID: {
+      exists: !!clientId,
+      length: clientId ? clientId.length : 0,
+      prefix: clientId ? clientId.substring(0, 5) + '...' : 'MISSING',
+    },
+    KEYSTATIC_GITHUB_CLIENT_SECRET: {
+      exists: !!secret,
+      length: secret ? secret.length : 0,
+      // Do NOT show the full secret
+      prefix: secret ? secret.substring(0, 3) + '...' : 'MISSING'
+    },
+    KEYSTATIC_URL: {
+      exists: !!baseUrl,
+      value: baseUrl || 'MISSING (Keystatic might guess localhost)'
+    }
+  }
+};
+---
+
+<html lang="en">
+  <head>
+    <title>Auth Debugger</title>
+  </head>
+  <body class="p-10 bg-gray-900 text-green-400 font-mono">
+    <h1 class="text-xl mb-4 font-bold">Authentication Debugger</h1>
+    <pre class="bg-black p-4 rounded border border-gray-700 overflow-auto">{JSON.stringify(debugInfo, null, 2)}</pre>
+  </body>
+</html>
