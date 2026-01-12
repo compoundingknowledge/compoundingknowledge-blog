@@ -1,24 +1,26 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import keystatic from '@keystatic/astro';
 import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
-  output: 'server',
+  output: 'server', // Keeps Vercel happy
 
   adapter: vercel({
     webAnalytics: { enabled: true },
-    // WICHTIG: Das hilft Vercel, die korrekten Header zu setzen
     imageService: true,
   }),
 
   integrations: [
-    tailwind(),
     react(),
     keystatic()
+    // Note: tailwind() integration is REMOVED here
   ],
 
-  // Sicherheits-Feature: Zwingt Astro, die Seite als "Site" zu verstehen
-  site: 'https://compoundingknowledge-blog.vercel.app',
+  vite: {
+    plugins: [
+      tailwindcss() // Tailwind 4 lives here now
+    ]
+  }
 });
