@@ -1,26 +1,16 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
-import keystatic from '@keystatic/astro';
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel/static';
 
 export default defineConfig({
-  output: 'server', // Keeps Vercel happy
-
+  output: 'static',
   adapter: vercel({
     webAnalytics: { enabled: true },
     imageService: true,
   }),
-
-  integrations: [
-    react(),
-    keystatic()
-    // Note: tailwind() integration is REMOVED here
-  ],
-
+  integrations: [react()],
   vite: {
-    plugins: [
-      tailwindcss() // Tailwind 4 lives here now
-    ]
+    plugins: [tailwindcss()]
   }
 });
