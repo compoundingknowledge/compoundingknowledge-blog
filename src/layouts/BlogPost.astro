@@ -1,0 +1,43 @@
+---
+import '../styles/global.css';
+
+const { frontmatter } = Astro.props;
+const { title, description, created, updated } = frontmatter;
+
+const formattedCreated = new Date(created).toLocaleDateString('de-DE', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const formattedUpdated = updated ? new Date(updated).toLocaleDateString('de-DE', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}) : null;
+---
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="bg-gray-100 p-10">
+    <article class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold mb-2">{title}</h1>
+        {description && <p class="text-xl text-gray-600 italic">{description}</p>}
+      </header>
+
+      <div class="prose max-w-none">
+        <slot />
+      </div>
+
+      <footer class="mt-12 pt-4 border-t border-gray-200 text-sm text-gray-500">
+        Erstellt: {formattedCreated} {formattedUpdated && `| Aktualisiert: ${formattedUpdated}`}
+      </footer>
+    </article>
+  </body>
+</html>

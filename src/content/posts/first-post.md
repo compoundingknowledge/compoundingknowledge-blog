@@ -1,6 +1,6 @@
 ---
 title: First Post
-date: 2026-01-13
+created: 2026-01-13
 description: My first post after switching to manual Markdown management.
 ---
 
