@@ -1,0 +1,202 @@
+{
+  "main": {
+    "id": "be116d135b8a5b76",
+    "type": "split",
+    "children": [
+      {
+        "id": "e0b497eb11072b56",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "857e261d9e06714e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "src/content/posts/start-trading-blog.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "start-trading-blog"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e7cbfa2b65ff0591",
+    "type": "split",
+    "children": [
+      {
+        "id": "bc921e44599477dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "22cc2990d9149447",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9163874ac596d7df",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "1d73011a827cf8cf",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b89923281660fee3",
+    "type": "split",
+    "children": [
+      {
+        "id": "45c01e6570aa32cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2bb22e06036f1297",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "compoundingknowledge-blog/src/content/posts/start-trading-blog.md.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for start-trading-blog.md"
+            }
+          },
+          {
+            "id": "56fd028dcc324dce",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "compoundingknowledge-blog/src/content/posts/start-trading-blog.md.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from start-trading-blog.md"
+            }
+          },
+          {
+            "id": "b4150ebe1e23c427",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "45f3ce1a930f0de7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "91a191d4374636bf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "compoundingknowledge-blog/src/content/posts/start-trading-blog.md.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of start-trading-blog.md"
+            }
+          },
+          {
+            "id": "520e2d19fa2d02f7",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "857e261d9e06714e",
+  "lastOpenFiles": [
+    "compoundingknowledge-blog/src/content/posts/first-post.md",
+    "compoundingknowledge-blog/src/content/posts/start-trading-blog.md"
+  ]
+}
